@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Confirmation and Rating</title>
+    <!-- Include Tailwind CSS -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/colors.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include your custom styles if needed -->
+    <style>
+      /* Add your custom styles here */
+    </style>
+  </head>
+
+  <body class="bg-[--orange] min-h-screen flex items-center justify-center">
+    <div
+      class="bg-neutral-100 p-8 rounded-xl shadow-xl shadow-orange-600 max-w-md w-full"
+    >
+      <h1 class="text-2xl text-neutral-700 font-bold mb-4">
+        Your Payment Has Been Received
+      </h1>
+      <p class="text-gray-700 mb-3">
+        Thank you for your payment! Your transaction is currently under review.
+      </p>
+
+      <!-- Rating System -->
+      <div class="flex items-center mb-6">
+        <p class="text-gray-700 mr-4">Please rate your experience:</p>
+        <!-- Replace this with your actual rating component or use a library if needed -->
+        <div class="flex">
+          <input
+            type="radio"
+            id="star5"
+            name="rating"
+            value="5"
+            class="hidden"
+          />
+          <label for="star5" class="text-2xl cursor-pointer text-[#ffc83d]"
+            >&#9733;</label
+          >
+          <input
+            type="radio"
+            id="star4"
+            name="rating"
+            value="4"
+            class="hidden"
+          />
+          <label for="star4" class="text-2xl cursor-pointer text-[#ffc83d]"
+            >&#9733;</label
+          >
+          <input
+            type="radio"
+            id="star3"
+            name="rating"
+            value="3"
+            class="hidden"
+          />
+          <label for="star3" class="text-2xl cursor-pointer text-[#ffc83d]"
+            >&#9733;</label
+          >
+          <input
+            type="radio"
+            id="star2"
+            name="rating"
+            value="2"
+            class="hidden"
+          />
+          <label for="star2" class="text-2xl cursor-pointer text-[#ffc83d]"
+            >&#9733;</label
+          >
+          <input
+            type="radio"
+            id="star1"
+            name="rating"
+            value="1"
+            class="hidden"
+          />
+          <label for="star1" class="text-2xl cursor-pointer text-[#ffc83d]"
+            >&#9733;</label
+          >
+        </div>
+      </div>
+
+      <!-- Additional Content -->
+      <div class="mb-6">
+        <label for="comments" class="text-gray-700 block mb-2"
+          >Any additional comments or suggestions?</label
+        >
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          class="w-full border bg-neutral-100 focus:border-orange-400 focus:bg-white outline-none p-2 rounded-[10px]"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex flex-row items-center space-x-1">
+        <a
+          href="../index.html"
+          class="bg-gradient-to-r hover:bg-gradient-to-l from-[#f57224] to-[#f0a837] text-white px-4 py-2 rounded"
+        >
+          Submit Rating
+        </a>
+        <a
+          href="../index.html"
+          class="bg-red-100 hover:bg-red-600 transition-all border border-red-600 text-red-600 hover:text-white text-medium px-4 py-2 rounded"
+        >
+          Go Back
+        </a>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
